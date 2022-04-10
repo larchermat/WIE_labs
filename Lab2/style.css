@@ -1,35 +1,74 @@
 body {
-	font-family: Verdana;
-	width: 750px
+  width: 750px;
+  font-family: Verdana;
 }
 
-@keyframes flight{
-	0%{left: 0; transform: rotateY(180deg);}
-	49%{left: 295px; transform: rotateY(180deg);}
-	50%{left:296px; transform: rotateY(0deg);}
-	100%{left:0px;}
+@-webkit-keyframes flight {
+  0% {
+    left: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  49% {
+    left: 295px;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    left: 296px;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes flight {
+  0% {
+    left: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  49% {
+    left: 295px;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    left: 296px;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 header {
-	position: relative;
-	background-image:url("clouds.jpg");
-	border: 1px solid navy;
-	height: 120px;
-	width: 500px;
+  width: 500px;
+  position: relative;
+  background-image: url("clouds.jpg");
+  border: 1px solid navy;
+  height: 120px;
 }
 
-header #airplaneimg{
-	position: relative;
-	animation-name: flight;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
+header #airplaneimg {
+  position: relative;
+  -webkit-animation-name: flight;
+          animation-name: flight;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 section {
-	float:left;
-	width: 500px;
+  width: 500px;
+  float: left;
 }
 
 section h1 {
-	color: red;		
+  color: red;
 }
+/*# sourceMappingURL=style.css.map */

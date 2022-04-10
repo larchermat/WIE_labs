@@ -1,0 +1,41 @@
+$fontArt: Verdana;
+$Clouds: "clouds.jpg";
+
+@mixin WidthSize($width){
+	width:$width;
+}
+
+body {
+	@include WidthSize(750px);
+	font-family: $fontArt;
+}
+
+@keyframes flight{
+	0%{left: 0; transform: rotateY(180deg);}
+	49%{left: 295px; transform: rotateY(180deg);}
+	50%{left:296px; transform: rotateY(0deg);}
+	100%{left:0px;}
+}
+
+header {
+	@include WidthSize(500px);
+	position: relative;
+	background-image:url($Clouds);
+	border: 1px solid navy;
+	height: 120px;
+	#airplaneimg{
+		position: relative;
+		animation-name: flight;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+}
+
+section {
+	@include WidthSize(500px);
+	float:left;
+	h1{
+		color:red;
+	}
+}
+
