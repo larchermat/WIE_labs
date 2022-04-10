@@ -3,12 +3,26 @@ body {
 	width: 750px
 }
 
+@keyframes flight{
+	0%{left: 0; transform: rotateY(180deg);}
+	49%{left: 295px; transform: rotateY(180deg);}
+	50%{left:296px; transform: rotateY(0deg);}
+	100%{left:0px;}
+}
+
 header {
 	position: relative;
 	background-image:url("clouds.jpg");
 	border: 1px solid navy;
 	height: 120px;
 	width: 500px;
+}
+
+header #airplaneimg{
+	position: relative;
+	animation-name: flight;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 }
 
 section {
